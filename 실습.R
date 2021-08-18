@@ -136,8 +136,13 @@ vif(full.time)
 shock$SURVIVAL<-as.factor(shock$SURVIVAL)
 fit.surv<-glm(SURVIVAL~TYPE, family=binomial, data=shock)
 summary(fit.surv)
+exp(cbind(coef(fit.surv),confint(fit.surv)))
+
 multifit.surv<-glm(SURVIVAL~TYPE+AGE+SEX+SP1+BSA+UO+HB, family=binomial, data=shock)
 summary(multifit.surv)
+exp(cbind(coef(multifit.surv),confint(multifit.surv)))
+
 #stepwise
 step.surv<-stepAIC(multifit.surv, direction="both", trace=F)
 summary(step.surv)
+exp(cbind(coef(multifit.surv),confint(multifit.surv)))
