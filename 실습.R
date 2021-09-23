@@ -1,4 +1,8 @@
+library(mgcv)
+
 shock<-read.csv(file="https://cutt.ly/shock")
+shock<-read.csv(file="D:/Dropbox/환경보건센터/2021년/환경보건 통계 워크숍/R 기본 강의/shock_excercise_202009.csv")
+
 head(shock)
 tail(shock)
 
@@ -49,6 +53,10 @@ shock_height<-select(shock, c(NO, HEIGHT))
 #나눈 데이터 다시 합하기 (column 합하기)
 library(plyr)
 shock_combine<-join(shock_basic, shock_height, by='NO')
+
+
+#########################################################
+
 
 #변수의 분포 확인
 summary(shock$AGE)
