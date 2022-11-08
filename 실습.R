@@ -1,7 +1,7 @@
 library(mgcv)
 
 shock<-read.csv(file="https://cutt.ly/shock")
-shock<-read.csv(file="D:/Dropbox/환경보건센터/2021년/환경보건 통계 워크숍/R 기본 강의/shock_excercise_202009.csv")
+shock<-read.csv(file="D:/shock_excercise.csv")
 
 head(shock)
 tail(shock)
