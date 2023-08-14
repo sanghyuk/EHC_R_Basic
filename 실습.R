@@ -1,5 +1,3 @@
-library(mgcv)
-
 shock<-read.csv(file="https://cutt.ly/shock")
 shock<-read.csv(file="D:/shock_excercise.csv")
 
@@ -154,3 +152,4 @@ exp(cbind(coef(multifit.surv),confint(multifit.surv)))
 step.surv<-stepAIC(multifit.surv, direction="both", trace=F)
 summary(step.surv)
 exp(cbind(coef(multifit.surv),confint(multifit.surv)))
+
